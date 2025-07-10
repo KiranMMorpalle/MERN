@@ -1,54 +1,0 @@
-﻿Sure! Let's break down React Props in a simple and practical way 👇
-
-✅ What Are Props in React?
-Props (short for Properties) are a way to pass data from one component to another in React — usually from a parent to a child component.
-They are read-only, meaning the child cannot modify the props it receives.
-
-📦 Think of it like:
-You're giving a gift (prop) to a friend (component). They can use it, but they can't change it.
-
-🧠 Key Concepts
-FeatureDescription🔁 One-way Data FlowProps flow from parent ➡️ child (not both ways)🔒 ImmutableProps cannot be changed by the receiving component⚙️ CustomizableComponents become dynamic using props💡 Pure FunctionsComponents use props to return UI based on input
-🧪 Example
-🧩 Parent Component
-import React from 'react';
-import Greet from './Greet';
-function App() {
-  return (
-    <div>
-      <Greet name="Kiran" age={24} />
-      <Greet name="Asha" age={21} />
-    </div>
-  );}
-
-🧩 Child Component
-function Greet({ name, age }) {
-  return (
-    <h2>Hello {name}, you are {age} years old!</h2>
-  );
-}
-
-export default Greet;
-
-🖥️ Output:
-Hello Kiran, you are 24 years old!
-Hello Asha, you are 21 years old!
-
-🔐 Props Are Read-Only
-props.name = "Rahul"; // ❌ This will give an error
-
-✅ Why Use Props?
-• 🔁 Reusability: Same component, different data
-• ⚙️ Dynamic UI: Change output based on input
-• 📤 Communication: Parent → Child data flow
-
-🧠 Advanced Props (Optional)
-• Pass functions as props
-• Props with arrays/objects
-• Props.children (for nested components)
-
-
-✅ Summary
-ConceptExplanationPropsData passed from parent to childDirectionOne-way (top-down)MutabilityRead-onlyUsageMakes components reusable & dynamic
-If you want a cheat sheet, MCQs, or mini project using props, I can make those for you too.
-
